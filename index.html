@@ -46,9 +46,62 @@
             text-decoration: underline;
             font-style: italic;
         }
+        .slider{
+            position: relative;
+            width: 100%;
+            height: 80%;  
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+        .slider .slideWrap{
+            position: relative;
+            list-style: none;
+            height: 80%;
+            width: 10000%;
+            padding: 0;
+            margin: 0;
+            transition: all 750ms ease;
+            left: 0;
+        }
+        .slider .slideWrap li{
+            position: relative;
+            height: 100%;
+            float:left;
+        }
+        .slider .slideWrap li img{
+            width: 100%;
+            height: 80%;
+        }
+        .slider .prev,.slider .next{
+            width: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            font-size: 2rem;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            transition: all 150ms ease;
+
+        }
+        .slider .prev{
+            left: 10px;
+        }
+        .slider .next{
+            right: 10px;
+        }
+        .slider .prev:hover, .slider .next:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            text-shadow: 0;
+        }
 
     </style>
 </head>
+            <!-- width: 100%;
+            height: 80%; -->
 <body>
     <header>
         <div>
@@ -62,6 +115,31 @@
             </ul>
         </nav>
     </header>
-    
+    <main>
+        <div class="slider" id="slider">
+            <ul class="slideWrap" id="slideWrap">
+                <li> <img src="./image/slide1.jpg"  alt="slider-img" > </li>
+                <li> <img src="./image/slide2.jpg" alt="slider-img2"> </li>
+                <li> <img src="./image/slide3.3.jpg" alt="slider-img3"> </li>
+                <li>  <img src="./image/slide4.4.jpg" alt="slider-img4"> </li>
+            </ul>
+            <a class="prev" id="prev" href="#">&#8810</a>
+            <a class="next" id="next" href="#">&#8811</a>
+        </div>
+    </main>
+    <script>
+        let responsiveSlider=function(){
+            let slider =document.getElementById("slider");
+            let sliderWidth = slider.offsetWidth;
+            let slideList =document.getElementById("slideWrap");
+            let count = 1;
+            let items = document.querySelectorAll("li").length;
+            let prev = document.getElementById("prev");
+            let next = document.getElementById("next");
+            window.addEventListener('resize',function(){
+                sliderWidth=slider.offsetWidth
+            })
+        }
+    </script>
 </body>
 </html>
