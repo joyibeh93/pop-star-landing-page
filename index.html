@@ -15,7 +15,7 @@
             font-size: 20px;
         }
         header{
-            background-color: black;
+            background: rgba(34, 27, 27, 0.99);
             display: flex;
             justify-content: space-between;
             padding: 10px 40px;
@@ -32,8 +32,11 @@
             display: inline-block;
             list-style: none;
             padding: 10px 20px;
-           
-
+        }
+        /* STYLINGING FOR IMAGE SLIDER */
+        .sliderimg{
+            background-position: center;
+            background-size: contain;
         }
         li a{
             text-decoration: none;
@@ -49,15 +52,15 @@
         .slider{
             position: relative;
             width: 100%;
-            height: 80%;  
+            height: 60%;  
             overflow: hidden;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
         }
         .slider .slideWrap{
             position: relative;
             list-style: none;
-            height: 80%;
-            width: 10000%;
+            height: 60%;
+            width: 1000%;
             padding: 0;
             margin: 0;
             transition: all 750ms ease;
@@ -65,12 +68,12 @@
         }
         .slider .slideWrap li{
             position: relative;
-            height: 100%;
+            height: 60%;
             float:left;
         }
         .slider .slideWrap li img{
             width: 100%;
-            height: 80%;
+            height: 60%;
         }
         .slider .prev,.slider .next{
             width: 50px;
@@ -118,27 +121,68 @@
     <main>
         <div class="slider" id="slider">
             <ul class="slideWrap" id="slideWrap">
-                <li> <img src="./image/slide1.jpg"  alt="slider-img" > </li>
-                <li> <img src="./image/slide2.jpg" alt="slider-img2"> </li>
-                <li> <img src="./image/slide3.3.jpg" alt="slider-img3"> </li>
-                <li>  <img src="./image/slide4.4.jpg" alt="slider-img4"> </li>
+                <li id="sliderimg"><img src="./image/slide1.jpg"  alt="slider-img1" class="sliderimg" > </li>
+                <li id="sliderimg"><img src="./image/slide2.jpg" alt="slider-img2" class="sliderimg"> </li>
+                <li id="sliderimg"><img src="./image/slide3.3.jpg" alt="slider-img3" class="sliderimg"> </li>
+                <li id="sliderimg"><img src="./image/slide4.4.jpg" alt="slider-img4" class="sliderimg"> </li>
+                <li id="sliderimg"><img src="./image/slide5.jpg" alt="slider-img5" class="sliderimg"> </li>
             </ul>
             <a class="prev" id="prev" href="#">&#8810</a>
             <a class="next" id="next" href="#">&#8811</a>
         </div>
+        <section class="About-Adl"></section>
     </main>
     <script>
+        // Javascript function for image slider
+
         let responsiveSlider=function(){
             let slider =document.getElementById("slider");
             let sliderWidth = slider.offsetWidth;
             let slideList =document.getElementById("slideWrap");
             let count = 1;
-            let items = document.querySelectorAll("li").length;
+            let items = document.querySelectorAll("#sliderimg").length;
             let prev = document.getElementById("prev");
             let next = document.getElementById("next");
             window.addEventListener('resize',function(){
                 sliderWidth=slider.offsetWidth
-            })
+            });
+            
+            let prevSlide = function() {
+                if(count > 1) {
+                    count = count - 2;
+                    slideList.style.left = "-" + count * sliderWidth + "px";
+                    count++;
+                 }
+            else if(count = 1) {
+                count = items - 1;
+                slideList.style.left = "-" + count * sliderWidth + "px";
+                count++;
+            }
+            };
+            let nextSlide=function(){
+                if (count<items){
+                      slideList.style.left ="-" + count * sliderWidth + "px";
+                     count++;
+                }
+                 else if(count = items) {
+                    slideList.style.left = "0px";
+                    count = 1;
+                }
+            };
+            next.addEventListener("click", function() {
+                nextSlide();
+            });
+
+            prev.addEventListener("click", function() {
+                prevSlide();
+            });
+
+            setInterval(function() {
+                nextSlide()
+            }, 5000);
+        }
+        window.onload = function() {
+            responsiveSlider();  
         }
     </script>
 </body>
