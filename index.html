@@ -28,6 +28,9 @@
         nav{
             margin: 0px 50px;
         }
+        ul li,ol li{
+            list-style: none;
+        }
         nav li{
             display: inline-block;
             list-style: none;
@@ -101,10 +104,44 @@
             text-shadow: 0;
         }
 
+        /* styling the About Section */
+        .About-Adl{
+            background-color: #ccc;
+        }
+        h2,h3{
+            text-align: center;
+            padding: 20px;
+        }
+        .grid-container{
+            padding: 50px 0px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+            grid-gap: 10px;
+        }
+         .grid-item{
+            background-color: rgba(255, 255, 255, 0.8);
+            /* border: 1px solid rgba(0, 0, 0, 0.8); */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 15px;
+            text-align: center;
+            margin: 0px 20px;
+            border-radius: 20px;
+            /* font-size: 100%; */
+
+        }
+        /* table tr td */
+        .grid-item,p table tr td{
+            line-height: 2rem;
+            word-spacing: 2px;
+            font-size: 100%;
+
+            /* margin-top: 30px; */
+            /* padding: 5px; */
+        }
+
+
     </style>
 </head>
-            <!-- width: 100%;
-            height: 80%; -->
 <body>
     <header>
         <div>
@@ -130,7 +167,109 @@
             <a class="prev" id="prev" href="#">&#8810</a>
             <a class="next" id="next" href="#">&#8811</a>
         </div>
-        <section class="About-Adl"></section>
+        <section class="About-Adl">
+
+                <h2> More About Adele Laurie Blue Adkins</h2>
+                
+            <div class="grid-container">
+                
+                <div class="grid-item">
+                    <h3>History</h3>
+                    <p><a href="#">Adele Laurie Blue Adkins</a>was born on may 5 1988 in North London,England is a British Song-writer and began singing 
+                        at the age of four, growing up she spent many days in Brockwell Park where she would play the guiter and sing to her friends. Adele graduated from 
+                        the BRIT school for Performing Art and Technology in Croydon in May 2006. On the  fourth month after graduating,
+                        she published two songs on the fourth issue of the online art website platforms Magazine.com.She had recorded a demo for a class
+                        project and had given it to a friend who then posted it on Myspace which led to a phone call from Richard Russell, boss of the music label XL Recordings.
+                   </p>
+
+                </div>
+                <div class="grid-item">
+                    <h3>Grammys and award Award</h3>
+                    <p> 
+                        Adele has won Grammys award as well as an Oscar. she has won a total of 15 Grammy award in the year 2009,2012,2013 and 2017. She is known as the first artist in Grammy history to sweep the top three categories twice  
+                    </p>
+                        <table>
+                            <tr>
+                                <td> ...2009...</td>
+                                <td>"Best New Artist" and also earned the Critics choice price at the BRIT Awards </td>
+                            </tr>
+                            <tr>
+                                <td>...2012...</td>
+                                <td>Took home six wins including Album of the year</td>
+                            </tr>
+                            <tr>
+                                <td>...2013...</td>
+                                <td>Best pop Solo performance, she also won a Golden globe award an Acadeemy award for skyfall</td>
+                            </tr>
+                            <tr>
+                                <td>...2017...</td>
+                                <td> Took home Five Award as well as the best Pop solo Performance as wellas the best Pop Vocal Albums</td>
+                            </tr>
+                    </table>
+                    
+                </div>
+                <div class="grid-item">
+                    <h3>Top Songs and year</h3>
+                    <table>
+                        <tr>
+                            <td>Hometown Glory ...</td>
+                            <td> 2008</td>
+                        </tr>
+                        <tr>
+                            <td>Chasing Pavement ...</td>
+                            <td> 2009</td>
+                        </tr>
+                        <tr>
+                            <td>Don't you Remember ...</td>
+                            <td>2011</td>
+                        </tr>
+                        <tr>
+                            <td>Turning Tables ...</td>
+                            <td>2011</td>
+                        </tr>
+                        <tr>
+                            <td>Rolling in the deep...</td>
+                            <td>2011</td>
+                        </tr>
+                        <tr>
+                            <td>Someone like you ...</td>
+                            <td>2011</td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Set fire to the rain ...</td>
+                            <td>2012 </td>
+                        </tr>
+                        <tr>
+                            <td>Rumour Has it ...</td>
+                            <td>2012</td>
+                        </tr>
+                        <tr>
+                            <td>Skyfall ... </td>
+                            <td>2012</td>
+                        </tr>
+                        <tr>
+                            <td>Hello ... </td>
+                            <td>2015</td>
+                        </tr>
+                        <tr>
+                            <td>Send My Love (To Your New Lover) ...</td>
+                            <td>2016</td>
+                        </tr>
+                        <tr>
+                            <td>When We Were Young ...</td>
+                            <td>2016</td>
+                        </tr>
+                        <tr>
+                            <td>Easy on Me ...</td>
+                            <td>2021</td>
+                        </tr>
+                    </table>
+                  
+                </div>
+            </div>
+            
+        </section>
     </main>
     <script>
         // Javascript function for image slider
