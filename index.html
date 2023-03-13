@@ -15,7 +15,8 @@
             font-size: 20px;
         }
         header{
-            background: rgba(34, 27, 27, 0.99);
+            background-color: #212738;
+            /* background: rgba(34, 27, 27, 0.99); */
             display: flex;
             justify-content: space-between;
             padding: 10px 40px;
@@ -24,6 +25,7 @@
         .img-logo{
             width: 110px;
             border-radius: 20px;
+            
         }
         nav{
             margin: 0px 50px;
@@ -105,12 +107,13 @@
         }
 
         /* styling the About Section */
-        .About-Adl{
+        .About-Adl,.pops-quote{
             background-color: #ccc;
+            padding: 10px;
         }
         h2,h3{
             text-align: center;
-            padding: 20px;
+            padding: 20px 0px;
         }
         .grid-container{
             padding: 50px 0px;
@@ -146,8 +149,91 @@
          /* STYLING ALBUMS QUOTE */
         .pop-img{
             width: 750px;
+            /* border-radius: 20px; */
         }
+        .albm-img{
+            width: 850px;
+            border-radius: 20px;
+        }
+        .img-card{
+            width: 400px;
+            border:1px solid #000;
+            
+            border-radius: 20px;
+        }
+        .img-card1{
+            margin: 0px 100px;
+        }
+        .Adele-Album-flex{
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0px;
+        }
+        .Album-r-img{
+            width: 100%;
+            height: 300px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+        .msg{
+            padding: 10px;
+            word-spacing: 2px;
+            line-height: 1.3em;
+            font-size: 100%;
+            text-align: center;
+        }
+/* STYLING FOOTER */
+.footer{
+        background-color: #212738;
+        color: #fff;
+        padding: 3.125rem;
+      }
+      .newsletter{
+        font-size: 1.25rem;
+        text-align: center;
+      }
+      .subcribe{
+        margin: 1.25rem auto;
+        width: 37.5rem;
+        
+      }
+      input[type=email]{
+        /* width: 80%; */
+        padding: 0.875rem 5.625rem;
+        font-size: 1.125rem;
+      }
+      .btn-fter{
+        padding: 0.875rem 2.1875rem;
+        background-color: #f97068;
+        border: 1px solid #f97068;
+        color: #fff;
+        font-size: 1.125rem;
+      }
+      .footer-cnt{
+        display: flex;
+        justify-content: space-around;
+        margin: 1.25rem 0.625rem;
+      }
+     .footer-cnt, .footer-list{
+        margin-top: 2.5rem;
+      }
 
+      .footer-list li{
+        font-size: 1.125rem;
+        line-height: 2em;
+        list-style: none;
+
+      }
+      .footer-list li:hover{
+        text-decoration: underline;
+      }
+      .footer-links h3{
+        margin-top: 0.625rem;
+      }
+      .footer-list li a{
+        color: #fff;
+        text-decoration: none;
+      }
     </style>
 </head>
 <body>
@@ -279,24 +365,17 @@
             </div>
             
         </section>
-        <section class="pops-quote">
+        <section class="pops-quote1">
             <h2>POPULAR QUOTE</h2>
-            <div class="pop-quote">
+            <div class="pop-quote1">
                 <div>
-                    <p>
-                        <img src="./image/Adele--19.png" alt="">
-                        <p>Release date: 28 January 2008, by XL Recording</p>
-                        <p>After graduation from BRIT school in April 2006,she began publishing song and recorded a three song demo for a class project
-                            and gave it to a friend who posted the demo on MYSPACE, where it became very successful and led to interest from the record label
-                        </p>
-                    </p>
+                   
                     
                     
 
                 </div>
                 <div>
-                    <img src="./image/Adeleimg3.webp" alt="imae2">
-
+                    <img src="./image/imagebn-2.webp" alt="album-img1" class="pop-img">
                 </div>
             </div>
         </section>
@@ -305,32 +384,88 @@
             <div class="pop-quote">
             
                 <div>
-                    <img src="./image/imagebn-2.webp" alt="album-img1" class="pop-img">
+                    <img src="./image/Adeleimg3.webp" alt="image2" class="albm-img">
                 </div>
                 
-                <div>
+                <div class="Adele-Album">
                     
-                    <p>
-                        <img src="./image/Adele--21.png" alt="">
-                        <p>Release date: 24 January,2011 by Columba Record</p>
-                        <p>The album was age after their age of the singer during its  production. The album explores themes of heartbreak,healing,intrispection and forgiveness  </p>
-                    </p>
-                    <p>
-                        <img src="./image/Adele--25.jpg" alt="album-img4">
-                        <p>Release date: 20 November,2015 by Columba Record</p>
-                        <p>The album is title as a reflection of her life and frame of mind at 25 years old and is termed a "make-up record"  </p>
-                    </p>
-                   
-                    <p>
-                        <img src="./image/Adele -- 30.jpg" alt="album-img4">
-                        <p>Release date: 19 November,2021 by Columba Record</p>
-                        <p>It was inspired  by Adele's divorce,Motherhood,fame and heartache and expresses theme of acceptance and hope</p>
-                    </p>
-                    
+                    <div class="img-card img-card1">
+                        <img src="./image/Adele--19.png" alt="Album-r-img" class="Album-r-img">
+                        <p class="msg">Release date: <br> <strong>8 January, 2008</strong>  by XL Recording</p>
+                        <p class="msg">After graduation from BRIT school in April 2006,she began publishing song and recorded a three song demo for a class project
+                            and gave it to a friend who posted the demo on MYSPACE, where it became very successful and led to interest from the record label
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="Adele-Album-flex">
+                <div class="img-card">
+                    <img src="./image/Adele--21.png" alt="Album-r-img" class="Album-r-img">
+                    <p class="msg">Release date:<br><strong>24 January, 2011</strong>  by Columba Record</p>
+                    <p class="msg">The album was age after their age of the singer during its  production. The album explores themes of heartbreak,healing,intrispection and forgiveness  </p>
+                </div>
+                <div class="img-card">
+                    <img src="./image/Adele--25.jpg" alt="album-img4" class="Album-r-img">
+                    <p class="msg">Release date:<br> <strong>20 November, 2015</strong>  by Columba Record</p>
+                    <p class="msg">The album is title as a reflection of her life and frame of mind at 25 years old and is termed a "make-up record"  </p>
+                </div>
+               
+                <div  class="img-card">
+                    <img src="./image/Adele -- 30.jpg" alt="album-img4" class="Album-r-img">
+                    <p class="msg">Release date:<br> <strong>19 November, 2021</strong>  by Columba Record</p>
+                    <p class="msg">It was inspired  by Adele's divorce,Motherhood,fame and heartache and expresses theme of acceptance and hope</p>
                 </div>
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div>
+            <img src="./image/adl-logo1.png" alt="logo" class="img-logo">
+        </div>
+        <p class="newsletter"> Subscribed to our newsletter</p>
+        <div class="subcribe">
+            <input type="email" placeholder="enter your email address"><button class="btn-fter">Subcribed</button>
+        </div>
+        <div class="footer-cnt">
+
+            <div class="footer-links">
+                <h3>connect with Us </h3>
+                <ul class="footer-list">
+                    <li> <a href="#"> <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                        </li>
+                    <li> <a href="#">  <i class="fa-brands fa-square-twitter"></i> Twiiter</a>
+                        </li>
+                    <li> <a href="#"> <i class="fa-brands fa-square-youtube"></i> Youtube</a> </li>
+                </ul>
+
+            </div>
+            <div class="footer-links">
+                <h3>Album Tittle</h3>
+                <ul class="footer-list">
+                    <li>Adele 19</li>
+                    <li>Adele 21</li>
+                    <li>Adele 25</li>
+                    <li>Adele 30</li>
+                </ul>
+
+            </div>
+            <div class="footer-links">
+                <h3>Company</h2>
+                <ul class="footer-list">
+                    <li><a href="#aboutUs">Home Page</a></li>
+                    <li><a href="#aboutUs">About Us</a></li>
+                    <li>  <a href="#whatWeDo"> Popular Quote</a> </li>
+                    <li> <a href="#gallery">Song List</a></li>
+                </ul>
+                
+
+            </div>
+        </div>
+        <p class="newsletter"> &copy;Ibeh Joy Chinwendu@2023</p>
+        
+        
+    </footer>
+    
     <script>
         // Javascript function for image slider
 
