@@ -124,7 +124,7 @@
          .grid-item{
             background-color: rgba(255, 255, 255, 0.8);
             /* border: 1px solid rgba(0, 0, 0, 0.8); */
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;
             padding: 15px;
             text-align: center;
             margin: 0px 20px;
@@ -142,11 +142,22 @@
             /* padding: 5px; */
         }
         /* STYLING ADELE FAMOUS QUOTE */
-        .pop-quote{
+        .pop-quote,.pop-quote1{
             display: flex;
+            justify-content: center;
             margin: 5px 20px;
         }
-         /* STYLING ALBUMS QUOTE */
+        .quote-msg{
+            padding: 10px;
+            line-height: 2em;
+            word-spacing: 2px;
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+            margin: 10px 20px;
+            border-radius: 10px;
+    
+        }
+   
+     /* STYLING ALBUMS QUOTE */
         .pop-img{
             width: 750px;
             /* border-radius: 20px; */
@@ -157,7 +168,9 @@
         }
         .img-card{
             width: 400px;
-            border:1px solid #000;
+            border:1px solid none;
+            /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
             
             border-radius: 20px;
         }
@@ -234,35 +247,91 @@
         color: #fff;
         text-decoration: none;
       }
+
+      /* MEDIA QUERY */
+      @media (min-width:200px) and (max-width:1200px) {
+        .grid-container{
+            display: block;
+        }
+        
+         .grid-item{
+            margin: 10px 0px;
+            padding: 20px;
+        }
+         table tr td{
+           width: 400px;
+           margin: 0 auto;
+        }
+
+        .pop-quote,.pop-quote1{
+            display: block;
+            justify-content: center;
+            margin: 5px 20px;
+        }
+        .quote-msg {
+            margin: 40px 0px;
+        }
+        .pop-img {
+            width: 550px;
+            border-radius: 20px;
+            display: block;
+            margin: 30px auto;
+        }
+        .subcribe {
+            margin: 1.5rem auto;
+            width: 16rem;
+        }
+        
+        input[type=email] {
+            padding: 0.75rem 0.25rem;
+            font-size: 1.5rem;
+        }
+        .btn-fter {
+        padding: 1rem 2.1875rem;
+        font-size: 1.5rem;
+        display: block;
+        margin: 20px auto;
+    }
+    .footer-cnt{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 1.25rem 0.625rem;
+            text-align: center;
+        }
+    
+}
+      
+      
     </style>
 </head>
 <body>
     <header>
         <div>
-            <img src="./image/adl-logo1.png" alt="logo" class="img-logo">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/731/original/adl-logo1.png?1678848367" class="img-logo">
         </div>
         <nav>
             <ul>
-                <li><a href="#">HomePage</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Popular Quote</a></li>
-               <li> <a href="#">Songs-Lists</a></li>
+                <li><a href="#Home">HomePage</a></li>
+                <li><a href="#About-Adl">About</a></li>
+                <li><a href="#Quotes">Popular Quote</a></li>
+               <li> <a href="#Albums">Songs-Lists</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="slider" id="slider">
+        <div class="slider" id="slider" id="Home">
             <ul class="slideWrap" id="slideWrap">
-                <li id="sliderimg"><img src="./image/slide1.jpg"  alt="slider-img1" class="sliderimg" > </li>
-                <li id="sliderimg"><img src="./image/slide2.jpg" alt="slider-img2" class="sliderimg"> </li>
-                <li id="sliderimg"><img src="./image/slide3.3.jpg" alt="slider-img3" class="sliderimg"> </li>
-                <li id="sliderimg"><img src="./image/slide4.4.jpg" alt="slider-img4" class="sliderimg"> </li>
-                <li id="sliderimg"><img src="./image/slide5.jpg" alt="slider-img5" class="sliderimg"> </li>
+                <li id="sliderimg"><img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/730/original/slide1.jpg?1678848351"  alt="slider-img1" class="sliderimg" > </li>
+                <li id="sliderimg"><img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/732/original/slide2.jpg?1678848379" alt="slider-img2" class="sliderimg"> </li>
+                <li id="sliderimg"><img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/733/original/slide3.3.jpg?1678848394" alt="slider-img3" class="sliderimg"> </li>
+                <li id="sliderimg"><img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/734/original/slide4.4.jpg?1678848409" alt="slider-img4" class="sliderimg"> </li>
+                <li id="sliderimg"><img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/735/original/slide5.jpg?1678848424" alt="slider-img5" class="sliderimg"> </li>
             </ul>
             <a class="prev" id="prev" href="#">&#8810</a>
             <a class="next" id="next" href="#">&#8811</a>
         </div>
-        <section class="About-Adl">
+        <section class="About-Adl" id="About-Adl">
 
                 <h2> More About Adele Laurie Blue Adkins</h2>
                 
@@ -365,32 +434,54 @@
             </div>
             
         </section>
-        <section class="pops-quote1">
+        <section class="pops-quote1" id="Quotes">
             <h2>POPULAR QUOTE</h2>
             <div class="pop-quote1">
-                <div>
-                   
-                    
-                    
-
+                
+                <div class="quote-cnt">
+                    <h2> QUOTES</h2>
+                    <p class="quote-msg">"I don't make music for the eyes, I make music for the ears."</p>
+                    <p class="quote-msg">"I don't have time to worry about something as petty as what I look like"</p>
+                    <p class="quote-msg">"Heartbreak can definitely give you a deeper sensibility for writing songs. I drew on a lot of heartbreak when I was writing my first album, I didn't mean to but I just did."</p>
+                    <p class="quote-msg">I know you haven't made your mind up yet,
+                        But I will never do you wrong.
+                        I've known it from the moment that we met,
+                        No doubt in my mind where you belong.
+                    </p>
+                    <p class="quote-msg">When the evening shadows and the stars appear,
+                        And there is no one there to dry your tears,
+                        
+                        I could hold you for a million years
+                        To make you feel my love
+                    </p>
+                    <p class="quote-msg">
+                        I like looking nice, but I always put comfort over fashion. I don't find thin girls attractive; be happy and healthy. I've never had a problem with the way I loo. I'd rather have lunch with my friends than go to the gym
+                    </p>
+                    <p class="quote-msg">
+                        Sometimes with pop music, you have to see it to love it. With soul music, it's sparse. There's nothing that's pretentious or planned. It's just so gutsy.
+                    </p>
+                    <p >
+                    <p class="quote-msg">
+                        Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.
+                    </p>
                 </div>
                 <div>
-                    <img src="./image/imagebn-2.webp" alt="album-img1" class="pop-img">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/741/original/imagebn-2.jpg?1678848994" alt="album-img1" class="pop-img">
                 </div>
             </div>
         </section>
-        <section class="pops-quote">
+        <section class="pops-quote" id="Albums">
             <h2>Albums Covers</h2>
             <div class="pop-quote">
             
                 <div>
-                    <img src="./image/Adeleimg3.webp" alt="image2" class="albm-img">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/742/original/Adeleimg3.jpg?1678849643" alt="image2" class="albm-img">
                 </div>
                 
                 <div class="Adele-Album">
                     
                     <div class="img-card img-card1">
-                        <img src="./image/Adele--19.png" alt="Album-r-img" class="Album-r-img">
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/737/original/Adele--19.png?1678848454" alt="Album-r-img" class="Album-r-img">
                         <p class="msg">Release date: <br> <strong>8 January, 2008</strong>  by XL Recording</p>
                         <p class="msg">After graduation from BRIT school in April 2006,she began publishing song and recorded a three song demo for a class project
                             and gave it to a friend who posted the demo on MYSPACE, where it became very successful and led to interest from the record label
@@ -400,18 +491,18 @@
             </div>
             <div class="Adele-Album-flex">
                 <div class="img-card">
-                    <img src="./image/Adele--21.png" alt="Album-r-img" class="Album-r-img">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/738/original/Adele--21.png?1678848467" alt="Album-r-img" class="Album-r-img">
                     <p class="msg">Release date:<br><strong>24 January, 2011</strong>  by Columba Record</p>
                     <p class="msg">The album was age after their age of the singer during its  production. The album explores themes of heartbreak,healing,intrispection and forgiveness  </p>
                 </div>
                 <div class="img-card">
-                    <img src="./image/Adele--25.jpg" alt="album-img4" class="Album-r-img">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/736/original/Adele--25.jpg?1678848438" alt="album-img4" class="Album-r-img">
                     <p class="msg">Release date:<br> <strong>20 November, 2015</strong>  by Columba Record</p>
                     <p class="msg">The album is title as a reflection of her life and frame of mind at 25 years old and is termed a "make-up record"  </p>
                 </div>
                
                 <div  class="img-card">
-                    <img src="./image/Adele -- 30.jpg" alt="album-img4" class="Album-r-img">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/739/original/Adele_--_30.jpg?1678848485" alt="album-img4" class="Album-r-img">
                     <p class="msg">Release date:<br> <strong>19 November, 2021</strong>  by Columba Record</p>
                     <p class="msg">It was inspired  by Adele's divorce,Motherhood,fame and heartache and expresses theme of acceptance and hope</p>
                 </div>
@@ -420,11 +511,11 @@
     </main>
     <footer class="footer">
         <div>
-            <img src="./image/adl-logo1.png" alt="logo" class="img-logo">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/731/original/adl-logo1.png?1678848367" alt="logo" class="img-logo">
         </div>
         <p class="newsletter"> Subscribed to our newsletter</p>
         <div class="subcribe">
-            <input type="email" placeholder="enter your email address"><button class="btn-fter">Subcribed</button>
+            <input type="email" placeholder="enter your email address"><button class="btn-fter"id="btn-subcribed">Subcribed</button>
         </div>
         <div class="footer-cnt">
 
@@ -452,10 +543,10 @@
             <div class="footer-links">
                 <h3>Company</h2>
                 <ul class="footer-list">
-                    <li><a href="#aboutUs">Home Page</a></li>
-                    <li><a href="#aboutUs">About Us</a></li>
-                    <li>  <a href="#whatWeDo"> Popular Quote</a> </li>
-                    <li> <a href="#gallery">Song List</a></li>
+                    <li><a href="#Home">HomePage</a></li>
+                    <li><a href="#About-Adl">About</a></li>
+                    <li><a href="#Quotes">Popular Quote</a></li>
+                    <li> <a href="#Albums">Songs-Lists</a></li>
                 </ul>
                 
 
@@ -518,6 +609,15 @@
         window.onload = function() {
             responsiveSlider();  
         }
-    </script>
+        //Handling Subscribed button
+        let subcribedButton=document.getElementById("btn-subcribed").addEventListener('click',message);
+
+        function message(){
+            alert("You have subscribed to our newletter")
+        }
+
+
+    
+        </script>
 </body>
 </html>
