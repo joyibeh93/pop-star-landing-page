@@ -177,24 +177,24 @@
         .img-card1{
             margin: 0px 100px;
         }
-        .Adele-Album-flex{
-            display: flex;
-            justify-content: space-around;
-            margin: 50px 0px;
-        }
-        .Album-r-img{
-            width: 100%;
-            height: 300px;
-            border-top-right-radius: 20px;
-            border-top-left-radius: 20px;
-        }
-        .msg{
-            padding: 10px;
-            word-spacing: 2px;
-            line-height: 1.3em;
-            font-size: 100%;
-            text-align: center;
-        }
+            .Adele-Album-flex{
+                display: flex;
+                justify-content: space-around;
+                margin: 50px 0px;
+            }
+            .Album-r-img{
+                width: 100%;
+                height: 300px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px;
+            }
+            .msg{
+                padding: 10px;
+                word-spacing: 2px;
+                line-height: 1.3em;
+                font-size: 100%;
+                text-align: center;
+            }
 /* STYLING FOOTER */
 .footer{
         background-color: #212738;
@@ -249,7 +249,22 @@
       }
 
       /* MEDIA QUERY */
-      @media (min-width:200px) and (max-width:1200px) {
+      @media (min-width:200px) and (max-width:700px) {
+        .slider{
+            display: none;
+        }
+        h3,h2{
+            padding:5px;
+            
+        }
+        .res-bg-img{
+            background-image: url("./image/Adeleimg3.jpg");
+            background-position: center;
+            background-size:cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 400px;
+        }
         .grid-container{
             display: block;
         }
@@ -272,10 +287,40 @@
             margin: 40px 0px;
         }
         .pop-img {
-            width: 550px;
-            border-radius: 20px;
+            width: 350px;
             display: block;
-            margin: 30px auto;
+            margin-bottom: 10px;
+        }
+        .pop-img img{
+            width: 100%;
+            border-radius: 10px;
+
+        }
+        .img-card1 {
+        margin: 0px;
+        }
+
+        .Adele-Album-flex{
+            flex-direction: column;
+            /* margin: 50px 0px; */
+        }
+        .img-card{
+            margin:20px auto;
+            width: 350px;
+
+        }
+        .Album-r-img{
+            width: 100%;
+            height: 300px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+        .msg{
+            /* padding: 10px; */
+            /* word-spacing: 2px;
+            line-height: 1.3em; */
+            font-size: 90%;
+            /* text-align: center; */
         }
         .subcribe {
             margin: 1.5rem auto;
@@ -298,12 +343,10 @@
             justify-content: space-around;
             margin: 1.25rem 0.625rem;
             text-align: center;
-        }
-    
-}
-      
-      
-    </style>
+        } 
+    }
+
+</style>
 </head>
 <body>
     <header>
@@ -320,6 +363,9 @@
         </nav>
     </header>
     <main>
+        <div class="res-bg-img">
+
+        </div>
         <div class="slider" id="slider" id="Home">
             <ul class="slideWrap" id="slideWrap">
                 <li id="sliderimg"><img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/730/original/slide1.jpg?1678848351"  alt="slider-img1" class="sliderimg" > </li>
@@ -465,8 +511,8 @@
                         Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.
                     </p>
                 </div>
-                <div>
-                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/741/original/imagebn-2.jpg?1678848994" alt="album-img1" class="pop-img">
+                <div class="pop-img">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/741/original/imagebn-2.jpg?1678848994" alt="album-img1" class="pop-img2">
                 </div>
             </div>
         </section>
@@ -474,13 +520,13 @@
             <h2>Albums Covers</h2>
             <div class="pop-quote">
             
-                <div>
+                <div class="pop-img">
                     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/742/original/Adeleimg3.jpg?1678849643" alt="image2" class="albm-img">
                 </div>
                 
                 <div class="Adele-Album">
                     
-                    <div class="img-card img-card1">
+                    <div class="img-card img-card1 pop-img">
                         <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/737/original/Adele--19.png?1678848454" alt="Album-r-img" class="Album-r-img">
                         <p class="msg">Release date: <br> <strong>8 January, 2008</strong>  by XL Recording</p>
                         <p class="msg">After graduation from BRIT school in April 2006,she began publishing song and recorded a three song demo for a class project
